@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Sound Event Detection</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+
+    <h1>Environmental Sound Monitor</h1>
+
+    <p class="subtitle">
+      Real-time environmental sound classification using CNN and Mel Spectrograms.
+    </p>
+
+    <div class="status" id="status">
+      Microphone Idle
+    </div>
+
+    <div class="wave-container">
+      <canvas id="waveCanvas"></canvas>
+    </div>
+
+    <div class="result-grid">
+
+      <div class="card">
+        <div class="card-title">Detected Sound</div>
+        <div class="card-value" id="soundClass">
+          ---
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Confidence</div>
+        <div class="card-value" id="confidence">
+          ---
+        </div>
+      </div>
+
+    </div>
+
+    <div class="alert-box" id="alertBox">
+      ⚠ Suspicious sound detected!
+    </div>
+
+    <div class="controls">
+      <button id="startBtn">Start Listening</button>
+      <button id="stopBtn">Stop</button>
+    </div>
+
+  </div>
+  <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+  <script src="app.js?v=4"></script>
+</body>
+</html>
